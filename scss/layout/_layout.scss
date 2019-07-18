@@ -1,25 +1,39 @@
 .main-container {
     width    : 100%;
     max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-header {
-    display  : flex;
-    flex-wrap: wrap;
+    display    : flex;
+    flex-wrap  : wrap;
     align-items: center;
 
     &-1 {
         width: 100%;
+
+        @media screen and (min-width:640px) {
+            width: 20%;
+        }
     }
 
     &-2 {
-        display    : flex;
-        width:100%;
-        justify-content: center;
+        width          : 80%;
+        justify-content: flex-end;
+        display        : flex;
+
+        @media screen and (max-width:640px) {
+            display: none;
+        }
+
     }
 
-    .contact-widget {
-        display: none;
-    }
+    .donate {
+        margin-left: .5em;
 
+        @media screen and (max-width:768px) {
+            display: none;
+        }
+    }
 }

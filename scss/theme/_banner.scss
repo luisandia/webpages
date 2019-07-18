@@ -1,0 +1,100 @@
+.main-banner {
+    position: relative;
+
+    &::before {
+        content   : "";
+        position  : absolute;
+        top       : 0;
+        left      : 0;
+        width     : 100%;
+        height    : 100%;
+        background: rgba($secondary-color, .6);
+        // background: linear-gradient(to left, darken($primary-color,50), $secondary-color);
+
+        opacity: .95;
+    }
+
+    &__data {
+        position : absolute;
+        display  : flex;
+        flex-wrap: wrap;
+        width    : 65%;
+        top      : 50%;
+        left     : 2em;
+        transform: translateY(-50%);
+
+
+        @media screen and (min-width:480px) {
+            width: 40%;
+        }
+
+        @media screen and (min-width:640px) {
+            width: 30%;
+        }
+
+        @media screen and (min-width:768px) {
+            width: 50%;
+        }
+
+        @media screen and (max-width: 768px) {
+            top            : 50%;
+            left           : 50%;
+            transform      : translate(-50%, -50%);
+            justify-content: space-around;
+        }
+    }
+
+    &__title {
+        margin    : 0 0 .5em;
+        text-align: center;
+        color     : $primary-color;
+        width     : 100%;
+
+        @media screen and (min-width:768px) {
+            text-align: left;
+            margin    : 0;
+            font-size : 2.2em;
+        }
+    }
+
+    &__img {
+        // background-size: cover;
+        display           : block; //para eliminar las franjas de la imagen ya que es inline
+        height            : 520px;
+        background-size   : cover;
+        background-image  : url("/img/banner.jpg");
+    }
+
+    &__subtitle,
+    &__description {
+        color: #fff;
+
+        @media screen and (max-width: 768px) {
+            display: none
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.4em;
+        margin   : 0;
+
+        &:after {
+            content   : '';
+            display   : block;
+            width     : 20%;
+            height    : 2px;
+            background: $primary-color;
+        }
+    }
+
+    &__description {
+        font-size  : $s;
+        line-height: 1.6;
+    }
+
+    .button {
+        @media screen and (min-width:768px) {
+            margin-right: 1em;
+        }
+    }
+}

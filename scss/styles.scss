@@ -2,7 +2,7 @@
 
 // paleta de color
 
-$primary-color  :hsl(205, 80, 60);
+$primary-color  :hsl(205, 100, 65);
 $secondary-color:hsl(0, 10, 10);
 
 // tamaño de fuentes
@@ -15,7 +15,7 @@ $xs: $m * 0.7;
 // Variables de layout
 
 $gutter: 16px;
-$max-width: 1200px;
+$max-width: 1100px;
 
 @import "base/fonts";
 @import "base/normalize.min.scss";
@@ -23,3 +23,5 @@ $max-width: 1200px;
 @import "theme/header";//look and feel
 @import "modules/modules";
 @import "base/base";
+@import "theme/menu";
+@import "theme/banner"

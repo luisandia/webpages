@@ -1,5 +1,6 @@
 .contact-widget {
     display: flex;
+    align-items: center;
 
     &__icon {
         width      : 2em;
@@ -7,8 +8,13 @@
         background : $secondary-color;
         color      : #fff;
         text-align : center;
-        line-height: 2.5em;
-        font-size  : e.5em;
+        font-size  : $xl;
+
+        margin-left:.5em;
+
+        &.button{
+            line-height: 2.3em;
+        }
     }
 
     &__data {
@@ -19,10 +25,12 @@
     &__title {
         margin     : 0;
         line-height: 1;
+        font-size: $m;
     }
 
     &__content {
         margin: 0;
+        font-size:$s;
     }
 }
 
@@ -49,5 +57,16 @@
 
     &--square {
         padding: 0;
+    }
+}
+
+.social-networks{
+    padding-left: .8em;
+    a{
+        text-decoration: none;
+        color:#fff;
+        display: inline-block;
+        line-height: 3;
+        margin-right:.5em;
     }
 }
