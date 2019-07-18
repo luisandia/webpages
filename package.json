@@ -1,0 +1,30 @@
+{
+  "name": "webpage_escuela_digital",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path --source-map  scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build:css": "postcss --use autoprefixer -b 'last 2 versions' < css/styles.css | postcss --use cssnano > css/styles.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisandia/webpages.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisandia/webpages/issues"
+  },
+  "homepage": "https://github.com/luisandia/webpages#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1",
+    "postcss": "^7.0.17",
+    "postcss-cli": "^6.1.3"
+  }
+}
