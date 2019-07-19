@@ -1,0 +1,13 @@
+extends templates/template.pug
+
+append config
+    -siguenos = false
+
+block main
+    h1 HTML5 Desde Cero - Proyecto final
+    p Este es el proyecto final creado en el curso HTML5 Desde Cero. El sitio ha sido creado utilizando el motor de plantillas pug y estilos con css plano para hacerlo totalmente responsive.
+    p El curso #[strong HTML5 Desde Cero] contiene 4 módulos que te llevan desde cero hasta crear este sitio web.
+    p Conoce más del curso e inscribete en #[a(href="https://escuela.digital/html" target="_blank") https://escuela.digital/html]
+
+block footer
+    include blocks/siguenos.pug

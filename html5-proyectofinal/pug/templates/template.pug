@@ -1,0 +1,37 @@
+block config
+    include ../config/config.pug
+
+doctype html
+html
+    head
+        title #{pageTitle} | #{siteTitle}
+        meta(charset="utf-8")
+        meta(name='description' content=description)
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+        link(href="https://file.myfontastic.com/wXUejw7cV5KRrdtkS8GFFi/icons.css" rel="stylesheet")
+        link(rel='stylesheet' href='/css/styles-dist.css')
+    body(class=currentPage)
+        header.main-header
+            .logo-container
+              a(href="/")
+                  img(src='/img/logo.svg').logo
+
+            nav.menu
+                include ../blocks/menu.pug
+
+        div.main-banner
+            block banner
+                img(src='/img/' + currentPage + '.jpg')
+
+        .main-content
+          main
+              block main
+
+          aside.main-sidebar
+              block aside
+                  if siguenos == true
+                      include ../blocks/siguenos.pug
+
+        footer.main-footer
+            p Creativos ABC - Todos los derechos reservados
+            block footer
