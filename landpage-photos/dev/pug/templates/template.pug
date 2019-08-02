@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 html(lang='es')
-    head
-        title Photos
-        meta(charset="utf-8")
-        meta(name='description' content=description)
-        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
-        link(href="https://file.myfontastic.com/wXUejw7cV5KRrdtkS8GFFi/icons.css" rel="stylesheet")
-        link(rel='stylesheet' href='css/main.min.css')
-    body(class=currentPage)
-        block main
+  head
+    title Photos
+    meta(charset="utf-8")
+    meta(name='description' content=description)
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    link(href="https://file.myfontastic.com/wXUejw7cV5KRrdtkS8GFFi/icons.css" rel="stylesheet")
+    link(rel='stylesheet' href='css/main.min.css')
+  body(class=currentPage)
+    header
+      block header
+    nav
+      block nav
+    .banner
+      block banner
+    .gallery
+      block gallery
+    .about
+      block about
+    .contact
+      block contact
+    footer
+      block footer
