@@ -88,9 +88,9 @@ function watchFiles() {
             baseDir: paths.pugs.dest
         }
     })
-    gulp.watch(paths.scripts.watch, scripts, server.reload);
+    gulp.watch(paths.scripts.watch, scripts).on("change",server.reload);
     gulp.watch(paths.styles.watch, styles);
-    gulp.watch(paths.pugs.watch, pugtasks, server.reload);
+    gulp.watch(paths.pugs.watch, pugtasks).on("change",server.reload);
 }
 export { watchFiles as watch };
 
