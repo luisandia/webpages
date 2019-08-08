@@ -15,11 +15,13 @@ const server = browserSync.create();
 
 const postCSSPlugins = [
     cssnano({
-        core: false,
-        autoprefixer: {
-            add: true
-        }
-    })
+        // core: false,
+        // autoprefixer: {
+        //     add: true
+        // },
+        minifyFontWeight: false
+
+    }),
 ];
 
 
@@ -54,8 +56,8 @@ export const clean = () => del(['assets']);
 export function styles() {
     return gulp.src(paths.styles.src)
         .pipe(sass())
-        .pipe(cleanCSS())
-        .pipe(postcss(postCSSPlugins))
+        // .pipe(cleanCSS())
+        // .pipe(postcss())
         // pass in options to the stream
         .pipe(rename({
             basename: 'main',

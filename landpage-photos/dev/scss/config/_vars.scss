@@ -1,0 +1,11 @@
+$vars: (primary:#434343,
+    secondary:#dedede,
+    accent:#d4671f);
+
+:root {
+
+    @each $key,
+    $value in $vars {
+        --#{$key}: #{$value};
+    }
+}
