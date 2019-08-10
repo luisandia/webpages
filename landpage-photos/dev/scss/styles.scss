@@ -4,7 +4,7 @@
 
 @import "base/base.scss";
 
-// @import "theme/typography";
+@import "theme/typography";
 
 body{
     @include var(background,secondary);

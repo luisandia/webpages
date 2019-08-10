@@ -1,0 +1,92 @@
+// colors and typographies in theme
+
+$fonts:(title1: 50px 60px,
+    title2: 32px 40px,
+    title3: 25px 30px,
+    base: 20px 30px,
+    small: 16px 20px,
+    smaller:14px 20px);
+
+
+// font-weight;
+$normal  :400;
+$semibold:600;
+
+@mixin font($size) {
+    font-size  : nth(map-get($fonts, $size), 1); //first value of $size, eg title1 will be 50px
+    line-height: nth(map-get($fonts, $size), 2);
+}
+
+body {
+    font-family: 'Zilla Slab', serif;
+    @include font(base);
+}
+
+
+
+.title1 {
+    @include font(title2);
+
+    @include from(large) {
+        @include font(title1)
+    }
+}
+
+.title2 {
+    @include font(title3);
+
+    @include from(large) {
+        @include font(title2)
+    }
+}
+
+.title3 {
+    @include font(base);
+
+    @include from(large) {
+        @include font(title3)
+    }
+}
+
+small,
+.small {
+    @include font(small);
+
+}
+
+.smaller {
+    @include font(smaller);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $semibold;
+}
+
+h1 {
+    margin-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+
+.title2,
+.title3 {
+    margin-top   : 1.5em;
+    margin-bottom: 1em;
+
+}
+
+.small,
+.smaller {
+    margin-top   : 1em;
+    margin-bottom: 1em;
+}
+
+a{
+    @include var(color,accent);
+}
