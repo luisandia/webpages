@@ -15,6 +15,69 @@ body {
 img {
   max-width: 100%; }
 
+.banner {
+  background: url(../img/banner.jpg) center/cover no-repeat;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  position: relative; }
+  .banner::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(130deg, #d4671f, #434343);
+    opacity: .2; }
+  .banner__copy {
+    text-align: center;
+    color: #fff;
+    position: relative; }
+  .banner__title {
+    font-size: 50px;
+    line-height: 60px; }
+  .banner__subtitle {
+    background: rgba(67, 67, 67, 0.8);
+    padding: .5em 1em;
+    display: table;
+    margin-left: auto;
+    margin-right: auto; }
+
+.logo--main {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 10%; }
+
+.menu,
+[class*="menu--"] {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  text-align: center; }
+  @media screen and (min-width: 1024px) {
+    .menu,
+    [class*="menu--"] {
+      display: flex;
+      justify-content: space-around; } }
+
+.menu__link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #434343; }
+  .menu__link.active {
+    color: #d4671f; }
+  @media screen and (min-width: 1024px) {
+    .menu__link {
+      line-height: 2.5;
+      display: block; } }
+
+.menu--main {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgba(67, 67, 67, 0.5); }
+
 body {
   font-family: 'Zilla Slab', serif;
   font-size: 20px;
@@ -78,7 +141,3 @@ h1 {
 a {
   color: #d4671f;
   color: var(--accent); }
-
-body {
-  background: #dedede;
-  background: var(--secondary); }

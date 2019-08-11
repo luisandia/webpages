@@ -1,0 +1,32 @@
+.menu,
+[class*="menu--"] {
+    list-style   : none;
+    margin-top   : 0;
+    margin-bottom: 0;
+    padding-left : 0;
+    text-align   : center;
+
+    @include from(large) {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.menu__link {
+    text-decoration: none;
+    font-weight: $semibold;
+    color:map-get($vars,primary);
+    &.active{
+        color:map-get($vars,accent);
+    }
+    @include from(large){
+        line-height: 2.5;
+        display:block;
+    }
+}
+
+.menu--main{
+    border-top:1px solid ;
+    border-bottom:1px solid;
+    border-color:rgba(map-get($vars,primary),.5)
+}

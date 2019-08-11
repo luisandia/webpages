@@ -1,11 +1,26 @@
+// ITCSS
+
 @import "config/functions";
 @import "config/vars.scss";
 @import "config/mixins.scss";
 
 @import "base/base.scss";
 
+// layout
+@import "layout/layout";
+
+// components
+@import "components/banners";
+@import "components/forms";
+@import "components/galleries";
+@import "components/logo";
+@import "components/menus";
+@import "components/sections";
+
+// theme
+@import "theme/theme";
 @import "theme/typography";
 
-body{
-    @include var(background,secondary);
-}
+// utils
+
+@import "utils/utils";
