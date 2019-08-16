@@ -45,11 +45,16 @@
         &::after {
             content     : "";
             display     : block;
-            widows      : 140%;
+            width      : 50%;
             height      : 2px;
             background  : $accent;
-            margin-left : -10%;
-            margin-right: -10%;
+            margin-left:25%;
+
+            @include from (large){
+                width      : 140%;
+                margin-left : -20%;
+
+            }
         }
     }
 }

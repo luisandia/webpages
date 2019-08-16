@@ -27,9 +27,12 @@
 }
 
 .form--contact {
+    max-width   : 90%;
+    margin-left : auto;
+    margin-right: auto;
+
     @include from (large) {
         width: 60%;
-        margin-left: auto;
-        margin-right: auto;
+
     }
 }
