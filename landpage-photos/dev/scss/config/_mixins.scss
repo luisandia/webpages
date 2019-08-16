@@ -3,8 +3,24 @@
     #{$property}: var(--#{$var});
 }
 
-@mixin from($breakpoint){
-    @media screen and (min-width: map-get($breakpoints,$breakpoint)){
+@mixin from($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
         @content;
     }
+}
+
+@mixin button($type) {
+    line-height: 3;
+
+    @if $type==primary {
+        background: $accent;
+        color     : #fff;
+    }
+
+    @else if $type==secondary {
+        background: $secondary;
+        color     : $primary;
+    }
+
+    border:1px solid $primary;
 }

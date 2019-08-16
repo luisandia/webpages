@@ -1,10 +1,10 @@
 .contact
   h2.contact__title.section__title Contacto
-  p.contact__description
+  p.contact__description.section__description
     | Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit illo quia laboriosam consequuntur? Odit nesciunt recusandae illo eos autem cupiditate, officiis magnam nam deleniti atque, ad, iure molestiae temporibus.
 
   form.form--contact
-    input(name="name" id="name" placeholder="Nombres")
-    input(type="email" name="email" id="email" placeholder="Email")
-    textarea(name="message", cols="30", rows="10" id="message")
-    input(type="submit" value="Contratame")
+    input(name="name" id="name" placeholder="Nombres").form__item
+    input(type="email" name="email" id="email" placeholder="Email").form__item
+    textarea(name="message", cols="30", rows="8" id="message" placeholder="Escribe tu mensaje").form__item
+    input(type="submit" value="Contratame").form__item.form__submit

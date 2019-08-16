@@ -10,17 +10,17 @@ html(lang='es')
     link(href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,600,600i&display=swap" rel="stylesheet")
 
   body(class=currentPage)
-    header
+    header.l-container
       block header
-    nav
+    nav.l-container
       block nav
-    .banner-container
+    .banner-container.l-container--full
       block banner
-    .gallery-container
+    .gallery-container.l-container.l-section
       block gallery
-    .about-container
+    .about-container.l-container--full.l-section
       block about
-    .contact
+    .contact.l-container.l-section
       block contact
-    footer
+    footer.footer.l-container--full
       block footer

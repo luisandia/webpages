@@ -5,28 +5,51 @@
     margin-bottom: 0;
     padding-left : 0;
     text-align   : center;
+    margin-bottom: 2em;
 
     @include from(large) {
-        display: flex;
+        display        : flex;
         justify-content: space-around;
     }
 }
 
 .menu__link {
     text-decoration: none;
-    font-weight: $semibold;
-    color:map-get($vars,primary);
-    &.active{
-        color:map-get($vars,accent);
+    font-weight    : $semibold;
+    color          : map-get($vars, primary);
+
+    &.active {
+        color: map-get($vars, accent);
     }
-    @include from(large){
+
+    @include from(large) {
         line-height: 2.5;
-        display:block;
+        display    : block;
     }
 }
 
-.menu--main{
-    border-top:1px solid ;
-    border-bottom:1px solid;
-    border-color:rgba(map-get($vars,primary),.5)
+.menu--main {
+    border-top   : 1px solid #95989A;
+    border-bottom: 1px solid #95989A;
+    border-color : rgba(map-get($vars, primary), .5)
+}
+
+.menu--section {
+    @include from(large) {
+        width       : 60%;
+        margin-left : auto;
+        margin-right: auto;
+    }
+
+    .active {
+        &::after {
+            content     : "";
+            display     : block;
+            widows      : 140%;
+            height      : 2px;
+            background  : $accent;
+            margin-left : -10%;
+            margin-right: -10%;
+        }
+    }
 }
