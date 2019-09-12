@@ -6,7 +6,7 @@
   "scripts": {
     "compile-scss": "node-sass --include-path scss scss/main.scss css/style.css",
     "development:live-server": "live-server",
-    "development:watch-css": "nodemon -e scss -x \"npm run compile-scss && npm run build:css\" ",
+    "development:watch-css": "nodemon -e scss -x \"npm run compile-scss && npm run build:css\"",
     "dev": "npm-run-all --parallel development:*",
     "build:css": "postcss --use autoprefixer -b 'last 2 versions' < css/style.css | postcss --use cssnano > css/style.min.css"
   },
