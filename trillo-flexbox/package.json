@@ -10,7 +10,7 @@
     "dev": "npm-run-all --parallel development:*",
     "build:css": "postcss --use autoprefixer -b 'last 10 versions' < css/style.css | postcss --use cssnano > css/style.min.css"
   },
-  "author": "",
+  "author": "Luis",
   "license": "ISC",
   "dependencies": {
     "live-server": "^1.2.1",
