@@ -14,11 +14,18 @@
 
 }
 
-.content {}
+.content {
+    display: flex;
+}
 
 .sidebar {
     background-color: var(--color-grey-dark-1);
-    
+    flex            : 0 0 18%;//grow shrink basis
+
 }
 
-.hotel-view {}
+.hotel-view {
+    background-color: #fff;
+    
+    flex:1;
+}
