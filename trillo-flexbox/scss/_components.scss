@@ -12,7 +12,7 @@
 // search box
 .search {
     // background-color: orangered;
-    flex            : 0 0 40%;
+    flex               : 0 0 40%;
 
     display        : flex;
     align-items    : center;
@@ -40,7 +40,7 @@
 
         &::-webkit-input-placeholder {
             font-weight: 100;
-            color: var(--color-grey-light-4);
+            color      : var(--color-grey-light-4);
         }
 
     }
@@ -68,7 +68,7 @@
     &__icon {
         height: 2rem;
         width : 2rem;
-        fill:var(--color-grey-dark-3);
+        fill  : var(--color-grey-dark-3);
     }
 }
 
@@ -84,6 +84,21 @@
 
 .user-nav {
     background-color: greenyellow;
+    align-self      : stretch;
+    display         : flex;
+    align-items     : center;
+
+    // direct childrens
+    &>* {
+        padding: 0 2rem;
+        cursor : pointer;
+        height : 100%;
+    }
+
+    &>*:hover {
+        background-color: var(--color-grey-light-2);
+
+    }
 
     &__icon-box {}
 
