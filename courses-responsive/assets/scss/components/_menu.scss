@@ -1,0 +1,57 @@
+.main-menu {
+    margin-top   : 0;
+    margin-bottom: 0;
+    padding-left : 0;
+    list-style   : none;
+
+    @include from (1){
+        display:flex;
+    }
+}
+
+.main-menu__item {
+    padding: 1rem;
+}
+
+.main-menu__link {
+    color      : $border-color;
+    margin-left: 1rem;
+
+    @include from (1){
+        color:$text-color;
+    }
+}
+
+.main-nav {
+    position   : fixed;
+    height     : calc(100vh - #{$header-height});
+    width      : 80vw;
+    background : $dark-color;
+    top        : $header-height;
+    right      : -80vw;
+    padding-top: 1rem;
+    transition : right .3s;
+
+    @include from(1) {
+        position   : static; // with static top and right are deleted
+        background : transparent;
+        padding-top: 0;
+        height     : auto;
+        width      : auto;
+    }
+
+    &.show {
+        right: 0;
+    }
+}
+
+.main-menu-toggle {
+    width     : 2.2rem;
+    height    : 1.6rem;
+    background: linear-gradient($dark-color 20%, transparent 20%, transparent 40%, $dark-color 40%, $dark-color 60%, transparent 60%, transparent 80%, $dark-color 80%);
+    cursor    : pointer;
+
+    @include from(1) {
+        display: none;
+    }
+}
