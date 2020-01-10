@@ -1,6 +1,11 @@
-@import "config/variables.scss";
 @import "config/mixins";
+@import "config/variables.scss";
 @import "base/base";
 @import "layout/layout";
 @import "components/header";
 @import "components/menu";
+@import "components/banner";
+@import "components/card";
+@import "components/buttons";
+@import "components/icons";
+@import "theme/theme";

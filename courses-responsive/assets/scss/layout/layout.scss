@@ -3,7 +3,60 @@
     padding-left : 1rem;
     padding-right: 1rem;
     display      : flex;
+    margin-left  : auto;
+    margin-right : auto;
+    flex-wrap    : wrap;
+}
 
-    margin-left: auto;
+.l-section {
+    margin-bottom: 2rem;
+
+    @include from (l) {
+        margin-bottom: 4rem;
+    }
+
+    &--diagonal {
+        position: relative;
+
+        &:before {
+            content   : "";
+            position  : absolute;
+            width     : 100%;
+            height    : 100%;
+            background: #f0f0f0;
+            z-index   : var(--z-back);
+            transform : skewY(-1deg) scaleY(1.025);
+
+            @include from(l) {
+                transform: skewY(-2deg) scaleY(1.1);
+
+            }
+        }
+    }
+}
+
+
+// personalized widths
+
+@for $i from 1 through 20 {
+    .s-#{$i * 5} {
+        width: #{$i * 5%};
+    }
+}
+
+@include from (l) {
+    @for $i from 1 through 20 {
+        .l-#{$i * 5} {
+            width: #{$i * 5%};
+        }
+    }
+}
+
+.center-block {
+    margin-left : auto;
     margin-right: auto;
+}
+
+.center-content {
+    text-align: center;
 }

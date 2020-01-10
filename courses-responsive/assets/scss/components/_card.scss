@@ -1,0 +1,36 @@
+.card {
+    margin-bottom: 2rem;
+    border       : 1px solid var(--color-border);
+
+    &__img img {
+        display: block; //take off spacing
+    }
+
+    &__content {
+        padding   : 1rem;
+        background: #fff;
+    }
+
+    &__subtitle {
+        margin-top   : -1rem;
+        margin-bottom: .5rem;
+        opacity      : .6;
+    }
+
+    &__footer {
+        border-top     : 1px solid var(--color-border);
+        margin-top     : 1rem;
+        padding-top    : 1rem;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+    }
+}
+
+.cards-container {
+    @include from(l) {
+        display              : grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap             : 2rem;
+    }
+}
