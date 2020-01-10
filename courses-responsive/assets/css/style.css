@@ -211,7 +211,7 @@ h3 {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none; }
-  @media screen and (min-width: 1) {
+  @media screen and (min-width: 960px) {
     .main-menu {
       display: flex; } }
 
@@ -221,7 +221,7 @@ h3 {
 .main-menu__link {
   color: #ccc;
   margin-left: 1rem; }
-  @media screen and (min-width: 1) {
+  @media screen and (min-width: 960px) {
     .main-menu__link {
       color: #53575A; } }
 
