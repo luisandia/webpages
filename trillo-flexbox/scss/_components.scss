@@ -465,7 +465,9 @@
     }
 
 
-    &__friends {}
+    &__friends {
+        display: flex;
+    }
 
     &__photo {
         box-sizing   : content-box; // for the image size
