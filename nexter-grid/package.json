@@ -1,0 +1,27 @@
+{
+  "name": "gridlayout-page",
+  "version": "1.0.0",
+  "description": "gridlayout webpage",
+  "main": "index.js",
+  "scripts": {
+    "compile-scss": "node-sass --include-path scss assets/scss/main.scss assets/css/style.css",
+    "development:live-server": "live-server",
+    "development:watch-css": "nodemon -e scss -x \"npm run compile-scss && npm run build:css\"",
+    "dev": "npm-run-all --parallel development:*",
+    "build:css": "postcss --use autoprefixer -b 'last 10 versions' < assets/css/style.css | postcss --use cssnano > assets/css/style.min.css"
+  },
+  "author": "Luis",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.17",
+    "postcss-cli": "^6.1.3"
+  }
+}
