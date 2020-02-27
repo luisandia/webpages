@@ -88,9 +88,10 @@ main {
     // margin       : auto;
     border-radius   : 50%;
     border          : $secondary-color 3px solid;
-    width           : 100%;
+    width           : 14rem;
     height          : 80%;
     align-self      : center;
+    justify-self    : center;
   }
 
   .bio {

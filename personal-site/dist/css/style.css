@@ -166,9 +166,10 @@ main {
     grid-area: bioimage;
     border-radius: 50%;
     border: #eece1a 3px solid;
-    width: 100%;
+    width: 14rem;
     height: 80%;
-    align-self: center; }
+    align-self: center;
+    justify-self: center; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
